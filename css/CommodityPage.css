@@ -1,0 +1,148 @@
+
+/* 公共样式 */
+.container{
+    width:1224px;
+    margin: 0 auto;
+}
+.header{
+    position: relative;
+}
+#header_wrap{
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+#header_wrap .nav_ul_bigbox{
+    position: absolute;
+    border-bottom: 1px solid #ccc;
+    top:100px;
+}
+#header_wrap .nav_ul_box{
+    top: 0;
+    display: block;
+}
+.site_nav{
+    background: #fff;
+    border: 1px solid #ff7600;
+    top:100px;
+    left: 0;
+    display: none;
+    
+}
+.nav_na{
+    top: 100px;
+}
+
+.all-goods{
+    cursor: pointer;
+}
+.all-goods:hover{
+    color: #ff7600;
+}
+/* banner图 */
+#ban-wrap{
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+}
+.ban{
+    height: 620px;
+    text-align: center;
+    position: relative;
+}
+.ban-img{
+    display: block;
+    height: 100%;
+
+}
+.ban-img img{
+    height: 100%;  
+    position: absolute;
+    left: -50%;
+    top: 0;
+}
+.prev{
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    top: 310px;
+    left: 0;
+    margin-top: -35px;
+    background: url(../images/icon-slides.png) no-repeat -84px 50%;   
+}
+.prev:hover{
+    background: url(../images/icon-slides.png) no-repeat 0px 50%;
+}
+.next{
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    top: 310px;
+    right: 0;
+    margin-top: -35px;
+    background: url(../images/icon-slides.png) no-repeat -125px 50%;
+}
+.next:hover{
+    background: url(../images/icon-slides.png) no-repeat -41px 50%;
+}
+.item-ul{
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px; 
+    text-align: center;
+    margin-left: 50%;
+}
+.item{
+    float: left;
+}
+.item a{
+    margin-left:10px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    border:3px solid;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+}
+/* 小米8青春版 */
+#mi8-wrap{
+    /* height: 434px; */
+    background: #f5f5f5;
+    overflow: hidden;
+}
+.mi8{
+    height: 434px;
+    background: #fff;
+    position: relative;
+}
+.pro{
+    line-height: 64px;
+    margin: 0;
+    padding-top: 4px;
+    color: #333;
+    font-size: 24px;
+    font-weight: normal;
+    background: #f5f5f5;
+}
+.mi8-img{
+    width: 854px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.mi8-img img{
+    width: 100%;
+    height: 100%;
+}
+.mi8-xx{
+    height: 434px;
+    background: #fff;
+    position: absolute;
+    left: 854px;
+}
+
+
+

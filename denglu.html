@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/denglu.css"/>
+	</head>
+	<body>
+		<header>
+			<h1><a href="#" title="小米">小米</a></h1>
+			<div class="top_d">
+				<h2>小米商城</h2>
+				<span>让每个人都能享受科技的乐趣</span>
+			</div>
+		</header>
+		<div class="login_wrapper">
+			<div class="login">
+				<form class="login_form" action="php/login_in.php" method="POST">
+					<h2>帐号登录</h2><span>|</span><h2>扫码登录</h2><br />
+					<input class="user" type="text" name="mail" placeholder="&nbsp;&nbsp;邮箱/手机号码/小米ID">
+					<input class="mima" type="password" name="password" placeholder="&nbsp;&nbsp;密码">
+					<button class="btn" type="submit">登录</button><br />
+					<a class="form_a" href="zhuce.html">手机短信登录/注册</a>
+					<div class="form_dv">
+						<a href="zhuce.html">立即注册</a>
+						<span>|</span>
+						<a href="zhuce.html">忘记密码?</a>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		
+		<script>
+			var $user = document.querySelector('.user'),
+			$mima = document.querySelector('.mima'),
+			$title = document.querySelector('.title1'),
+			$btn = document.querySelector('.btn'),
+			$title2 = document.querySelector('.title2');
+			$user.onblur = function() {
+				if($user.value == '') {
+					$title.innerHTML = '内容不能为空';
+				}else{
+					$title.innerHTML = '';
+				}
+			}
+			$mima.onblur = function(event) {
+				if($mima.value == '') {
+					$title2.innerHTML = '内容不能为空';
+				}else{
+					$title.innerHTML = '';
+				}
+			}
+			
+		</script>
+	</body>
+</html>

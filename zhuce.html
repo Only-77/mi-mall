@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zhuce.css"/>
+	</head>
+	<body>
+		<form class="form" action="php/login.php" method="POST">
+			<h1><a href="#" title="小米">小米</a></h1>
+			<h2>注册小米帐号</h2> 
+			邮箱:<input type="text" name="mail"><span class="mailtitle"></span><br/> 
+			用户名:<input type="text" name="username" /><span class="uertitle"></span><br/> 
+			密码:<input class="password" type="password" name="password"><span class="passwordtitle"></span><br/> 
+			密码验证:<input class="repassword" type="password" name="repassword"><span class="repasswordtitle"></span><br/> 
+			<button type="submit">立即注册</button>
+		</form>
+		<script>
+			function $(ele) {
+				return document.querySelector(ele);
+			}
+			var $form = $('.form'),
+			$mailtitle = $('.mailtitle'),
+			$mail = $form["mail"],
+			$user = $form["username"],
+			$uertitle = $('.uertitle'),
+			$mm = $('.password'),
+			$mm2 = $('.repassword'),
+			$mmtile = $('.passwordtitle'),
+			$mm2tile = $('.repasswordtitle');
+			$mail.onblur = function() {
+				var uereg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+				if(uereg.test($mail.value)){
+					$mailtitle.innerHTML = '可用ID';
+				}else{
+					$mailtitle.innerHTML = '邮箱格式不正确!';
+				}
+			}
+			
+			$user.onblur = function() {
+				if($user.value == '') {
+					$uertitle.innerHTML = '用户名不能为空!';
+				}else if($user.value.length > 10) {
+					$uertitle.innerHTML = '用户名过长!';
+				}else if($user.value.length < 10 && $user.value.length > 0){
+					$uertitle.innerHTML = '可用ID';
+				}
+			}
+
+			$mm.onblur = function() {
+				var mmreg = /^(?:\d+|[a-zA-Z]+|[!@#$%^&*]+){6}$/
+				if(mmreg.test($mm.value)) {
+					$mmtile.innerHTML = '验证成功!';
+				}else if($mm.value == '') {
+						$mmtile.innerHTML = '密码不能为空';
+				} else {
+					$mmtile.innerHTML = '请输入六位密码!';
+
+				}
+			}
+
+			$mm2.onblur = function() {
+				setInterval(() => {
+					if($mm2.value == $mm.value) {
+						$mm2tile.innerHTML = '验证成功!';
+					} else{
+						$mm2tile.innerHTML = '密码不一致';
+					}
+				})
+			}
+		</script>
+	</body>
+</html>

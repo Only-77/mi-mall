@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,p,fieldset,legend,input,section,textarea,select{margin:0;padding:0}
+
+body,html{
+	/* font:12px "微软雅黑",Arial; */
+	width:100%;
+	height: 100%;
+	color:#666;	
+	background: #fff;
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+body{
+	position: relative;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+	font-weight:normal;
+	font-size:100%;	
+}
+i,em{
+	font-style:normal;	
+}
+li{
+	list-style:none;	
+}
+a{
+	text-decoration:none;
+	color:#2f2f2f;	
+}
+input{
+	outline:none;	
+}
+img{
+	border:0;	
+}
+.clearfix{
+	*zoom:1;	
+}
+.clearfix:after{
+	content:' ';
+	display:block;
+	height:0;
+	clear:both;
+	overflow:hidden;
+}
+.container{
+	width: 1226px;
+	margin: 0 auto;
+}

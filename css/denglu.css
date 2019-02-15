@@ -1,0 +1,125 @@
+header {
+	height: 100px;
+	width: 1136px;
+	margin: 0 auto;
+}
+
+header h1 {
+	height: 68px;
+	width: 69px;
+	margin-right: 20px;
+	float: left;
+}
+
+header h1 a {
+	text-indent: -9999px;
+	margin-top: 24px;
+	display: block;
+	height: 68px;
+	width: 69px;
+	background:url(../images/logo_03.jpg) no-repeat;
+}
+
+.top_d {
+	margin-top: 24px;
+	height: 60px;
+	float: left;
+}
+
+.top_d h2 {
+	font-size: 26px;
+	color: #000000;
+}
+
+.top_d span {
+	font-size: 12px;
+}
+
+.login_wrapper {
+	height: 590px;
+	width: 100%;
+	background: url(../images/banner2.jpg) no-repeat top;
+	background-size: 100%;
+}
+
+.login {
+	height: 590px;
+	width: 1136px;
+	margin: 0 auto;
+}
+
+.login_form {
+	width: 380px;
+	height: 500px;
+	background: #FFFFFF;
+	padding: 30px 30px;
+	float: right;
+}
+
+.login_form span {
+	font-size: 26px;
+	height: 30px;
+}
+
+.login_form h2 {
+	height: 30px;
+	font-size: 26px;
+	display: inline-block;
+	margin: 0 40px;
+}
+
+.login_form h2:nth-of-type(1) {
+	color: red;
+}
+
+.login_form h2:nth-of-type(2):hover {
+	color: red;
+}
+
+.user {
+	width: 354px;
+	height: 50px;
+	margin-top: 32px;
+	margin-bottom: 16px;
+	font-size: 16px;
+}
+
+.mima {
+	width: 354px;
+	height: 50px;
+	margin-bottom: 32px;
+	font-size: 16px;
+}
+
+.btn {
+	width: 354px;
+	height: 50px;
+	background: red;
+	color: #FFFFFF;
+}
+
+.form_a {
+	float: left;
+	color: red;
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+}
+
+.form_dv {
+	float: right;
+}
+
+.form_dv a {
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	margin: 0 6px;
+	color: #666666;
+}
+
+.form_dv span {
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+}

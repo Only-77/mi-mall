@@ -1,0 +1,50 @@
+body,
+html {
+	background: #f5f5f5;
+}
+
+form {
+	height: 754px;
+	width: 840px;
+	border: 1px solid red;
+	margin: 150px auto;
+	padding: 0 234px;
+	box-sizing: border-box;
+}
+
+span {
+	display: inline-block;
+	color: red;
+}
+
+form h1 {
+	height: 68px;
+	width: 69px;
+	margin: 0 auto;
+}
+
+form h1 a {
+	text-indent: -9999px;
+	margin-top: 24px;
+	display: block;
+	height: 68px;
+	width: 69px;
+	background: url(../images/logo_03.jpg)no-repeat;
+}
+
+h2 {
+	text-align: center;
+	width: 100%;
+}
+
+input {
+	height: 44px;
+	width: 334px;
+}
+
+button {
+	height: 44px;
+	width: 334px;
+	background: red;
+	color: #FFFFFF;
+}

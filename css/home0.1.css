@@ -1,0 +1,288 @@
+
+/* 手机库 */
+#phone_wrapper{
+    height:694px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+.phone{
+    height:694px;
+}
+.title_h2 a{
+    float: right;
+    font-size:16px;
+    color:#424242;
+    line-height: 60px;
+}
+.title_h2 a:hover{
+    color:#ff6700;
+}
+.phone_wrap{
+    width:1226px;
+    height:614px;
+    float: left;
+    position: relative;
+}
+.mi_mix3{
+    width:234px;
+    height:614px;
+    position: absolute;
+    /* top:0px; */
+}
+
+.mi_mix3 a{
+    display: block;
+    width:234px;
+    height:614px;
+}
+.mi_mix3 a img{
+    width:234px;
+    height:614px;
+}
+.phoneList{
+    width:992px;
+    height:614px;
+    float:right;
+}
+.phoneUl{
+    height:614px;
+}
+.phoneList ul li{
+    width:234px;
+    height:300px;
+    float:left;
+    /* position: absolute; */
+    margin-left:14px;
+    margin-bottom: 14px; 
+
+}
+.phoneList ul li a{
+    display: block;
+    width:234px;
+    height:300px;
+    background: #fff;
+    padding-top: 20px;
+    box-sizing: border-box;
+    
+}
+.new{
+    display: block;
+    width:64px;
+    height: 20px;
+    background:#83c44e;
+    color: #fff;
+    font-size:10px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top:0;
+    left:85px;
+}
+.phoneList ul li a img{
+    width:160px;
+    height:160px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.phoneList ul li a span{
+    display: block;
+    text-align: center;
+    line-height: 24px;
+    color: #333;
+    font-size: 14px;
+}
+.phoneList ul li a b{
+    display: block;
+    font-size: 12px;
+    color: #b0b0b0;
+    line-height: 20px;
+    text-align: center;
+}
+.phoneList ul li a strong{
+    display: block;
+    text-align: center;
+    color: #ff6700;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 900;
+}
+/* 小米电视广告 */
+/* #mi_TV_wrap{
+    background: #f5f5f5;
+    overflow: hidden;
+}
+#mi_TV_wrap .mi_TV{
+    height:120px;
+    margin:42px auto;
+}
+.mi_TV a{
+    display: block;
+    width:1226px;
+    height:120px;
+}
+.mi_TV a img{
+    width:1226px;
+    height:120px;    
+} */
+/* 家电 */
+#appliance_wrap{
+    height:694px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+/* 家电集合 */
+.jd_list{
+    float:left;
+}
+.jd_left{
+    float:left;
+    width:234px;
+    height:614px;
+}
+.jd_left li{
+    width:234px;
+    height:300px; 
+}
+.jd_left li:first-child{
+    margin-bottom: 14px;
+}
+.jd_left li a{
+    display: block;
+    width:234px;
+    height: 300px;    
+}
+.jd_left a img{
+    width:234px;
+    height: 300px;   
+}
+.jd_right{
+    width:992px;
+    height:614px;
+    float: left;
+}
+.jd_right ul li{
+    width:234px;
+    height:300px;
+    float: left;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    margin-left:14px;
+    margin-bottom: 14px;
+    background: #fff;
+}
+.jd_right ul li a{
+    display: block;
+    /* width:194px; */
+    height:260px;  
+}
+.jd_right ul li a img{
+    display: block;
+    width:160px;
+    height:160px;
+    margin: 0 auto;
+}
+
+.jd_right ul li h3{
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    line-height: 22px;
+    margin-top:16px;
+  
+}
+.jd_right ul li p:nth-of-type(1){
+    color:#b0b7cc;
+    font-size:12px;
+    text-align: center;
+    line-height: 18px;
+}
+.jd_right ul li p:nth-of-type(2){
+    color:#ff6700;
+    font-size:14px;
+    text-align: center;
+    margin-top:12px;
+}
+.jd_right ul li p:nth-of-type(2) s{
+    color:#b0b0b0;
+    margin-left:5px;
+}
+.jd_right ul li:last-child{
+    background: #f5f5f5;
+    padding: 0;
+}
+.jd_li_t{
+    width:234px;
+    height: 143px;
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.jd_li_t a{
+    display: block;
+    margin-top:20px;
+    margin-left:20px; 
+}
+.jd_li_t a p{
+    float: left;
+    line-height: 26px;
+     
+     
+}
+.jd_li_t a p span:first-child{
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+    text-align: left; 
+}
+.jd_li_t a p span:last-child{
+    color:#ff6700;
+    font-size:14px;
+    margin-top:12px;
+    text-align: left; 
+    margin-top:13px;
+}
+#appliance_wrap  .jd_li_t a img{
+    width:80px;
+    height: 80px;  
+    float: right;  
+}
+.jd_li_b{
+    width:234px;
+    height: 143px;
+    margin-top:14px;
+    padding: 20px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.jd_li_b a{
+    display: block;
+}
+.jd_li_b  a h4{
+    float: left;
+    font-size: 18px;
+    color:#333;
+    text-align: left;
+    margin-top:30px;
+}
+.jd_li_b  a h4 span{
+    /* float: left; */
+    font-size:12px;
+    color: #757575;
+    text-align: left;
+}
+.jd_li_b  a i{
+    float: right;
+    font-size:50px;
+    color: #ff6700;
+    margin-top:30px;
+}
+#smart_wrap{
+    height:694px;
+    overflow: hidden;
+}
+#smart_wrap .jd_li_t a img{
+    width:80px;
+    height: 80px;  
+    float: right;  
+}

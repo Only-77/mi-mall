@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.nav {
+				position: relative;
+				float: left;
+			}
+			
+			.nav a {
+				float: left;
+				display: block;
+				height: 50px;
+				line-height: 50px;
+				font-size: 18px;
+				color: #333;
+				display: block;
+				margin: 0 12px;
+			}
+			.nav_lis {
+				width: 1532PX;
+				position: absolute;
+			/*	display: none;*/
+				top: 50px;
+				left: 0;
+				list-style: none;
+			}
+			
+			.nav_lis li {
+				float: left;
+				font-size: 14px;
+				text-align: center;
+			}
+			.nav_lis li img{
+				height: 102px;
+				width: 204px;
+				border-right: 1px solid #eee;
+			}
+			.nav_lis li:nth-of-type(5) img{
+				border-right:none;
+			}
+			.nav_lis li p:nth-of-type(1){
+				height: 24px;
+				line-height: 24px;
+			}
+			.nav_lis li p:nth-of-type(2){
+				color: red;
+				height: 14px;
+				line-height: 14px;
+			}
+			.nav a:hover {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav class="nav">
+			<a href="#">小米手机</a>
+			<a href="#">红米</a>
+			<a href="#">电视</a>
+			<a href="#">笔记本</a>
+			<a href="#">家电</a>
+			<a href="#">新品</a>
+			<a href="#">路由器</a>
+			<a href="#">只能硬件</a>
+			<a href="#">服务</a>
+			<a href="#">社区</a>			
+		</nav>
+		<ul class="nav_lis">
+			
+		</ul>
+		<script>
+			var $nav = document.querySelector('.nav');
+			var $a_All = $nav.children;
+			var $ul = document.querySelector('.nav_lis')
+			var $frage = document.createDocumentFragment();
+			console.log($a_All)
+			var arrtextone = 
+			[['小米MIX 3','小米8青春','小米8','小米play','小米8 SE'],
+			['红米Note 7','红米6 Pro','红米6','红米6A','红米Note 5'],
+			['小米电视4S 75英寸','小米电视4A 32英寸','小米电视4A 43英寸青春版','小米电视4A 50英寸','小米电视4A 55英寸'],
+			['小米笔记本 Air 12.5"','小米笔记本 Air 13.3"','小米笔记本 15.6"','小米笔记本 Pro 15.6"','小米游戏本'],
+			['米家互联网洗烘一体机10kg','米家互联网空调（一级能效）','米家互联网空调','小米净水器','米家扫地机器人']];
+			var arr = ['0','1','2','3','4'];
+			var arrtexttwo = 
+			[['3299','1399','2699','1099','1699'],
+			['999','999','799','599','1099'],
+			['7999','799','1399','1899','2199'],
+			['3599','4999','4199','5599','6699'],
+			['2499','2549','2149','1799','1499']];
+			for(var i = 0; i < arr.length; i++){
+				var $li = document.createElement('li');
+				var $img = document.createElement('img');
+				var $p = document.createElement('p');
+				var $p2 = document.createElement('p');
+				$a_All[i].onmousemove = function(){
+					for(var j = 0; j < arr.length; j++){
+						$img.src ='images/nav0' + i + '.png';				
+						$p.innerHTML = arrtextone[i][j];
+						$p2.innerHTML = arrtexttwo[i][j]+' 起';
+					}
+				}
+				$li.appendChild($img);
+				$li.appendChild($p);
+				$li.appendChild($p2);
+				$frage.appendChild($li);
+			}
+			
+			$ul.appendChild($frage);
+		</script>
+	</body>
+
+</html>
