@@ -266,6 +266,9 @@
     line-height: 42px;
     box-sizing: border-box;
 }
+.bb-item:focus{
+	border-color: red;
+}
 .bb-item1{
     border:1px dashed #e0e0e0;
 }

@@ -7,6 +7,9 @@
     opacity: 1 ;
     z-index: 200;
 }
+/* .ban{
+    position: absolute;    
+} */
 #mix3_wrap .site_nav{
     opacity: 1;
     background: #fff;
@@ -25,10 +28,11 @@
     height:63px;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
+    
 }
 .mix3{
-    height:63px; 
-    position: relative; 
+    height:63px;
+    position: relative;    
     z-index: 200;
 }
 .mix3_wrap_js{
@@ -78,12 +82,6 @@
 }
 #mix3_wrap .buy a:hover{
     color:#fff;
-}
-#mix3_wrap .nav_ul_bigbox{
-    height: 0;
-    border-bottom: 0; 
-    background: #fff; 
-    z-index: 2;  
 }
 /* mix3轮播图 */
 #bannerMIX3_wrap{
@@ -815,6 +813,7 @@
     top: 0;
     left: 0;
 }
+
 .ir{
     display: block;
     text-align: left;

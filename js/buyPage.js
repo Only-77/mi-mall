@@ -35,7 +35,11 @@ var buyPage = (function () {
     var $right = $('.right');
     var $left = $('.left');
     var $buyBox = $('.buyBox');
-    // console.log($bbItem[0]);
+    var $navNa = document.querySelector('.nav_na');
+    var $nav = document.querySelector('.nav');
+    var $btn1 = $('.btn1');
+    var $priceP = $('.price-p');
+    var $priSpan = $('.pri-span');
     return {
         init() {
             prevIndex = nextIndex = 0;
@@ -66,21 +70,50 @@ var buyPage = (function () {
                     _this.slideTo(prevIndex, nextIndex);
                 }
                 _this.autoPlay();
+            }   
+            $bbUl.onclick = function(e){
+                e = e|| window.event;
+                
+                var target = e.target || e.srcElement;
+                for(var i = 0; i < $bbItem.length ; i++){
+                    $bbItem[i].classList.remove('bb-js');
+                }
+                if(target.nodeName === 'A'){
+                    target = target.parentNode;
+                    target.classList.add('bb-js');
+                    
+                }
+                if(target.nodeName === 'I' || target.nodeName === 'SPAN'){
+                    target = target.parentNode.parentNode;
+                    target.classList.add('bb-js');
+                }
+                if(target.nodeName === 'LI'){
+                    target.classList.add('bb-js');
+                }
+                _this.changeName(target);
+                
+                
+                
             }
-
+           
             // 全部商品分类
-            $allGoods.onmouseenter = function () {
+            $allGoods.onmouseenter = function(){
                 $siteNav.style.display = 'block';
             }
-            // $allGoods.onmouseleave = function () {
-            //     $siteNav.style.display = 'none';
-            // }
-            $navTitle.onmouseleave = function () {
+            $nav.onmouseenter = function(){
                 $siteNav.style.display = 'none';
             }
-            $siteNav.onmouseleave = function () {
+            $navNa.onmouseenter = function(){
+                $siteNav.style.display = 'block';
+                $navNa.onmouseleave = function(){
                 $siteNav.style.display = 'none';
             }
+            }
+            $siteNav.onmouseleave = function(){
+                $siteNav.style.display = 'none';
+            }
+
+            
 
 
 
@@ -132,6 +165,26 @@ var buyPage = (function () {
                 if($dn > 1229){
                     $left.style.marginTop = 968 + 'px';
                 }
+            }
+        },
+        //点击改变商品名
+        changeName (target){
+            console.log(target.index);
+            if(target.index == 0){
+                $priceP.innerHTML = `<strong>小米MIX 3 故宫特别版 10GB+ 256GB 宝石蓝</strong><i>4999元</i>`;
+                $priSpan.innerText = '4999元'
+            }
+            if(target.index == 1){
+                $priceP.innerHTML = `<strong>小米MIX 3 全网通版 8GB+128GB 宝石蓝</strong><i>3599</i>`;
+                $priSpan.innerText = '3599元'
+            }
+            if(target.index == 2){
+                $priceP.innerHTML = `<strong>小米MIX 3 全网通版 6GB+128GB 黑色</strong><i>3299</i>`;
+                $priSpan.innerText = '3299元'
+            }
+            if(target.index == 3){
+                $priceP.innerHTML = `<strong>小米MIX 3 全网通版 8GB+256GB 黑色</strong><i>3999元</i>`;
+                $priSpan.innerText = '3999元'
             }
         }
 

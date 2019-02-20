@@ -1,7 +1,3 @@
-/**
- * 未完成功能：
- *     1、 点击播放按钮视频未播放
- * */
 
 //二级导航
 var nav_na = (function () {
@@ -61,7 +57,10 @@ var goodsPage = (function () {
     var $iconSp1 = $('.icon-sp1');
     var $videovideo = $iconSp1.previousElementSibling;
     var $videoSrc = $('.video-src');
-
+    var $allGoods = document.querySelector('.all-goods');
+    var $siteNav = document.querySelector('.site_nav');
+    var $navNa = document.querySelector('.nav_na');
+    var $nav = document.querySelector('.nav');
     return {
         init() {
             this.event();
@@ -78,9 +77,6 @@ var goodsPage = (function () {
             var $navUl = $('.site_nav');
             var $allGoods = $('.all-goods');
 
-            // document.onclick = function (e) {
-            //     e.preventDefault();
-            // }
             $play1.onclick = function () {
                 _this.playvideo($src1);
             }
@@ -88,13 +84,19 @@ var goodsPage = (function () {
                 _this.playvideo($src2);
             }
             $allGoods.onmouseenter = function(){
-                $navUl.style.display = 'block';
+                $siteNav.style.display = 'block';
             }
-            $mix3.onmouseleave = function(){
-                $navUl.style.display = 'none';
+            $nav.onmouseenter = function(){
+                $siteNav.style.display = 'none';
             }
-            $navUl.onmouseleave = function(){
-                $navUl.style.display = 'none';
+            $navNa.onmouseenter = function(){
+                $siteNav.style.display = 'block';
+                $navNa.onmouseleave = function(){
+                $siteNav.style.display = 'none';
+            }
+            }
+            $siteNav.onmouseleave = function(){
+                $siteNav.style.display = 'none';
             }
 
         },

@@ -1,7 +1,7 @@
 
 /* 公共样式 */
 .container{
-    width:1224px;
+    width:1226px;
     margin: 0 auto;
 }
 .header{
@@ -26,6 +26,9 @@
     top:100px;
     left: 0;
     display: none;
+    z-index: 1;
+    background: #fff;
+    opacity: 1;
     
 }
 .nav_na{
@@ -49,16 +52,19 @@
     text-align: center;
     position: relative;
 }
-.ban-img{
+.ban-img1,.ban-img2{
     display: block;
     height: 100%;
-
 }
-.ban-img img{
+.ban-img1{
+    display: none;
+}
+.ban img{
     height: 100%;  
     position: absolute;
     left: -50%;
     top: 0;
+    margin-left: -50px;
 }
 .prev{
     width: 41px;
@@ -86,16 +92,19 @@
 }
 .item-ul{
     height: 10px;
-    width: 100%;
     position: absolute;
-    bottom: 10px; 
+    bottom: 20px; 
+    left: 50%;
     text-align: center;
-    margin-left: 50%;
+    margin-left: 20px;
 }
-.item{
+.item1,.item2{
     float: left;
 }
-.item a{
+.item-ul .item1 a{
+    background: rgba(255, 255, 255, 0.4);  
+}
+.item-ul a{
     margin-left:10px;
     display: block;
     width: 10px;
@@ -108,14 +117,14 @@
 }
 /* 小米8青春版 */
 #mi8-wrap{
-    /* height: 434px; */
+    height: 498px;
     background: #f5f5f5;
-    overflow: hidden;
 }
 .mi8{
-    height: 434px;
-    background: #fff;
     position: relative;
+    height: 100%;
+    background: #fff;
+
 }
 .pro{
     line-height: 64px;
@@ -126,23 +135,156 @@
     font-weight: normal;
     background: #f5f5f5;
 }
+.wrap{
+    width: 100%;
+    height: 434px;
+    position: absolute;
+    top: 64px;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
 .mi8-img{
     width: 854px;
     height: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0px;
 }
 .mi8-img img{
-    width: 100%;
-    height: 100%;
+    width: 854px;
+    height: 434px;
 }
 .mi8-xx{
-    height: 434px;
+    height: 340px;
     background: #fff;
     position: absolute;
-    left: 854px;
+    left: 916px;
+    top: 64px;
+    bottom: 0;
+    width: 270px;
+}
+.xx-title{
+    color: rgba(51,51,51,0.9);
+    font-size: 32px;
+}
+.xx-desc{
+    width: 270px;
+    line-height: 22px;
+    min-height: 44px;
+    margin: 4px 0 0;
+    color: rgba(51,51,51,0.7);
+    font-size: 14px;
+}
+.xx-price{
+    line-height: 45px;
+    margin: 17px 0 0;
+    color: #ff6700;
+    font-size: 32px;
+    font-weight: bold;
+}
+.xx-price span{
+    font-size: 12px;
+    line-height: 45px;
+}
+.xx-price s{
+    font-size: 12px;
+    line-height: 45px;
+    color: rgba(51,51,51,0.6);
+    margin-left: 18px;
+}
+.link{
+    position: absolute;
+    left: 0;
+    bottom: 62px;
+    margin: 0;
+}
+.k{
+     width: 100%;
+     height: 14px;
+     background: #f5f5f5;
+ }
+#row-wrap{
+    background: #f5f5f5;
+}
+.row{
+    height: 482px;
+    position: relative;
+    background: #f5f5f5;
+}
+.row-left,.row-right{
+    width: 606px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+}
+.row-left img,.row-right img{
+    width: 606px;
+    height: 358px;
+}
+.row-left{
+    left: 0;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.row-right{
+    left:606px;
+    margin-left: 14px;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.l-bt,.r-bt{
+    position: relative;    
+}
+.l-h3{
+    font-size: 24px;
+    line-height: 26px;
+    margin: 38px 0 0 48px;
+}
+.l-desc{
+    line-height: 18px;
+    margin: 3px 0 0 48px;
+    color: rgba(51,51,51,0.7);
+    font-size: 14px;
+}
+.l-price{
+    position: absolute;
+    right: 48px;
+    top: 18px;
+    margin: 0;line-height: 30px;
+    color: #ff6700;
+    font-size: 12px;
+}
+.l-price strong{
+    font-size: 30px;
+}
+.l-price s{
+    color: rgba(51,51,51,0.6);  
+    line-height: 30px;
+    font-weight: 900;
 }
 
-
-
+.row-left:hover {
+    z-index: 2;
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+                      transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+}
+.row-right:hover {
+    z-index: 2;
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+                      transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+}
+.wrap:hover{
+    z-index: 2;
+    -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+                      transform: translate3d(0, -2px, 0);
+    transform: translate3d(0, -2px, 0);
+}
