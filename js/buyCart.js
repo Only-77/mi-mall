@@ -3,12 +3,12 @@ var buycart = (function () {
         $listBody = $('.list-body'),
         $priceG = $('.price-g i'),
         a = 0;
-
     return {
         init() {
             this.addHTML();
             this.event();
             this.num();
+            this.cz();
 
         },
         event() {
@@ -91,7 +91,6 @@ var buycart = (function () {
                         total = $('.list-body .col-total');
                         $priceG.innerHTML = $pri*data;
                         total.innerHTML = $priceG.innerHTML + '元';
-                        // location.reload();
                     }
                 })
             }
@@ -106,11 +105,8 @@ var buycart = (function () {
                     data:json,
                     success(data){
                         total = $('.list-body .col-total');
-                        // console.log(data)
                         $priceG.innerHTML = $pri*data;
                         total.innerHTML = $priceG.innerHTML + '元';
-                        // console.log(total);
-                        // location.reload();
                     }
                 })
             }
@@ -125,13 +121,16 @@ var buycart = (function () {
                     if(target.nodeName === 'BUTTON'){
                         var id = target.parentNode.parentNode.getAttribute('id');
                         var json = {id};
-                        console.log(typeof json)
+                        // console.log(typeof json)
                         sendAjax('php/deleteCart.php',{
                             type:'GET',
                             data:json,
                             success(data){
                                 $priceG.innerHTML = 0;
                                 target.parentNode.parentNode.remove();
+                                if($priceG.innerHTML){
+                                    location.href = 'GouWuChe.html';
+                                }
                             }
                         })
                     }
